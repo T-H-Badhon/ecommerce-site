@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import ShopItem from '../ShopItem/ShopItem';
 import OrderSummary from '../OrderSummary/OrderSummary';
 import { loadLocalCart, removeLocal, setLocalCart } from '../../Utility/localStorageOperation';
@@ -44,7 +44,9 @@ const Body = () => {
              }
             </div>
             <div className='col-span-2'>
-                <OrderSummary key='orderSummary' cart={cart} removeF={removeFCart}></OrderSummary>
+                <OrderSummary key='orderSummary' cart={cart} removeF={removeFCart}>
+                <Link to='/orders'><h1 className='mb-2 px-5 py-2 text-center bg-green-400 rounded-xl'>Show Orders</h1></Link>
+                </OrderSummary>
             </div>
         </div>
 
