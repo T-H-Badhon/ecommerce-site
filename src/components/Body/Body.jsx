@@ -38,12 +38,12 @@ const Body = () => {
 
     return (
         <div className='grid grid-cols-6 gap-4'>
-            <div className='grid grid-cols-3 gap-4 col-span-4'>
+            <div className='grid grid-cols-1 md:grid-cols-3 md:gap-4 col-span-6  md:col-span-4'>
              {
                 products.map(product => <ShopItem key={product.id} product={product} fn={addToCart}></ShopItem> )
              }
             </div>
-            <div className='col-span-2'>
+            <div className='col-span-6  md:col-span-2'>
                 <OrderSummary key='orderSummary' cart={cart} removeF={removeFCart}>
                 <Link to='/orders'><h1 className='mb-2 px-5 py-2 text-center bg-green-400 rounded-xl'>Show Orders</h1></Link>
                 </OrderSummary>
