@@ -91,7 +91,7 @@ const Register = () => {
                         </Link>
                     </Label>
                 </div>
-                <Button type="submit">
+                <Button className='bg-slate-800' type="submit">
                     Register new account
                 </Button>
             </form>

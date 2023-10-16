@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link, Outlet, useLoaderData } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/images/Logo.svg'
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { Button } from 'flowbite-react';
